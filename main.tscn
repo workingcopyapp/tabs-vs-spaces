@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://b4x2cmstsbbrc"]
+
+[ext_resource type="Script" uid="uid://bu0ymmfh5e6d0" path="res://main.gd" id="1_main"]
+[ext_resource type="Texture2D" uid="uid://vxxofi6t4wbo" path="res://art/background.jpg" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://clwyjctyoq1u4" path="res://art/tab.png" id="3_tab"]
+[ext_resource type="Texture2D" uid="uid://3vyy2evxyijy" path="res://art/space.png" id="4_space"]
+[ext_resource type="Texture2D" uid="uid://b1rku8ui7oj6" path="res://art/title/tabs.png" id="5_tabs"]
+[ext_resource type="Texture2D" uid="uid://rww7hcgo5jl5" path="res://art/title/versus.png" id="6_versus"]
+[ext_resource type="Texture2D" uid="uid://dgrxc1j7ylofx" path="res://art/title/spaces.png" id="7_spaces"]
+[ext_resource type="Texture2D" uid="uid://b7f8vw67xgmr3" path="res://art/title/tab-rotated.png" id="8_tab_key"]
+[ext_resource type="Texture2D" uid="uid://ds38a34h5htno" path="res://art/title/space-rotated.png" id="9_space_key"]
+[ext_resource type="AudioStream" uid="uid://kvn7sckj47d" path="res://sounds/laser.wav" id="10_laser"]
+[ext_resource type="AudioStream" uid="uid://da8op5h3crx24" path="res://sounds/blip.wav" id="11_blip"]
+[ext_resource type="AudioStream" uid="uid://cy5vyfm6uefxh" path="res://sounds/alien-laugh.wav" id="12_laugh"]
+
+[sub_resource type="SystemFont" id="SystemFont_menlo"]
+font_names = PackedStringArray("Menlo", "Monospace")
+font_weight = 700
+
+[node name="Main" type="Node2D" unique_id=1588836459]
+script = ExtResource("1_main")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2096930831]
+texture = ExtResource("2_background")
+centered = false
+
+[node name="Words" type="Node2D" parent="." unique_id=1808140654]
+
+[node name="Lasers" type="Node2D" parent="." unique_id=1949095733]
+
+[node name="Heroes" type="Node2D" parent="." unique_id=385102896]
+
+[node name="Tab" type="Sprite2D" parent="Heroes" unique_id=1869982659]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_tab")
+
+[node name="Space" type="Sprite2D" parent="Heroes" unique_id=893479164]
+visible = false
+scale = Vector2(0.325, 0.325)
+texture = ExtResource("4_space")
+
+[node name="Title" type="Node2D" parent="." unique_id=1722090760]
+
+[node name="Tabs" type="Sprite2D" parent="Title" unique_id=1918257738]
+position = Vector2(412, 920)
+texture = ExtResource("5_tabs")
+
+[node name="Versus" type="Sprite2D" parent="Title" unique_id=1933882922]
+position = Vector2(855, 1100)
+texture = ExtResource("6_versus")
+
+[node name="Spaces" type="Sprite2D" parent="Title" unique_id=1654352138]
+position = Vector2(1462, 920)
+texture = ExtResource("7_spaces")
+
+[node name="TabKey" type="Sprite2D" parent="Title" unique_id=1937892461]
+position = Vector2(465, 1552)
+texture = ExtResource("8_tab_key")
+
+[node name="SpaceKey" type="Sprite2D" parent="Title" unique_id=891514435]
+position = Vector2(1185, 1725)
+texture = ExtResource("9_space_key")
+
+[node name="Subtitle" type="Label" parent="Title" unique_id=437994330]
+offset_top = 2200.0
+offset_right = 2048.0
+offset_bottom = 2420.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_fonts/font = SubResource("SystemFont_menlo")
+theme_override_font_sizes/font_size = 120
+text = "Intergalactic Type Safety"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyboard" type="LineEdit" parent="." unique_id=2006083538]
+offset_left = -400.0
+offset_top = -200.0
+offset_right = -100.0
+offset_bottom = -140.0
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+
+[node name="LaserSound" type="AudioStreamPlayer" parent="." unique_id=1606638916]
+stream = ExtResource("10_laser")
+max_polyphony = 8
+
+[node name="BlipSound" type="AudioStreamPlayer" parent="." unique_id=1558759566]
+stream = ExtResource("11_blip")
+volume_db = -6.0
+max_polyphony = 8
+
+[node name="LaughSound" type="AudioStreamPlayer" parent="." unique_id=1625176573]
+stream = ExtResource("12_laugh")
+max_polyphony = 4

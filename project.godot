@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Tabs vs Spaces"
+config/description="Words crawl down towards your key, the tab or the space, and typing the first
+letter of a word shoots that letter away. Clear the words before they reach you.
+
+Ported to Godot from the SpriteKit game of 2017."
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7")
+config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=750
+window/size/viewport_height=1000
+window/size/window_width_override=600
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[xogot]
+
+project/editorState=[]
+project/shaderEditorState=[]
+project/breakpoints={}
+project/disabled_breakpoints={}
