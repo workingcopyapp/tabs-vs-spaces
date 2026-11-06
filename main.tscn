@@ -19,6 +19,7 @@ font_weight = 700
 
 [node name="Main" type="Node2D" unique_id=1588836459]
 script = ExtResource("1_main")
+laser_color = Color(0.46273804, 0.73332214, 0.25097656, 1)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2096930831]
 texture = ExtResource("2_background")
