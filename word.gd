@@ -4,7 +4,7 @@ extends Node2D
 
 signal letter_dropped
 
-const LETTER_SCALE := 0.3
+const LETTER_SCALE := 0.4
 const SHAKE_ANGLE := 0.05 * PI
 
 var velocity := 200.0
